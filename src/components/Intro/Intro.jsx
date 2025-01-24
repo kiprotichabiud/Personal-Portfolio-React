@@ -24,7 +24,7 @@ const Main = () => {
           <div>
             <p className="intro-text">LET'S BUILD SOMETHING BEAUTIFUL</p>
             <h1 className="greeting">
-              Hi, I am <span className="highlight">Michael Munavu</span>
+              Hi, I am <span className="highlight">Abiud Kiprotich</span>
             </h1>
             <h2 className="role">I am a</h2>
             <h1 className="dynamic-role">
@@ -54,7 +54,7 @@ const Main = () => {
             <div className="social-icons">
               <div className="icon-wrapper">
                 <a
-                  href="https://www.linkedin.com/in/michael-munavu/"
+                  href="https://www.linkedin.com/in/abiud-kiprotich-5577692a7/"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -63,7 +63,7 @@ const Main = () => {
               </div>
               <div className="icon-wrapper">
                 <a
-                  href="https://github.com/MICHAELMUNAVU83"
+                  href="https://github.com/kiprotichabiud"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -72,7 +72,7 @@ const Main = () => {
               </div>
               <div className="icon-wrapper">
                 <a
-                  href="https://twitter.com/MichaelTrance1"
+                  href="https://twitter.com/your_twitter_handle"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -80,13 +80,13 @@ const Main = () => {
                 </a>
               </div>
               <div className="icon-wrapper">
-                <a href="tel:0740769596" rel="noopener noreferrer">
+                <a href="tel:+254715394384" rel="noopener noreferrer">
                   <FiPhoneCall className="icon" />
                 </a>
               </div>
               <div className="icon-wrapper">
                 <a
-                  href="https://wa.me/254740769596"
+                  href="https://wa.me/254715394384"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -95,7 +95,7 @@ const Main = () => {
               </div>
               <div className="icon-wrapper">
                 <a
-                  href="https://www.tiktok.com/@michaelmunavu"
+                  href="https://www.tiktok.com/@your_tiktok_handle"
                   target="_blank"
                   rel="noreferrer"
                 >
