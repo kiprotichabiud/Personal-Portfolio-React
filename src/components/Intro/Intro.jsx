@@ -1,97 +1,113 @@
-import React, { useContext } from "react";
-import "./Intro.css";
-import Vector1 from "../../img/Vector1.png";
-import Vector2 from "../../img/Vector2.png";
-import boy from "../../img/boy.png";
-import glassesimoji from "../../img/glassesimoji.png";
-import thumbup from "../../img/thumbup.png";
-import crown from "../../img/crown.png";
-import FloatinDiv from "../FloatingDiv/FloatingDiv";
-import Github from "../../img/github.png";
-import LinkedIn from "../../img/linkedin.png";
-import Instagram from "../../img/instagram.png";
-import { themeContext } from "../../Context";
+import React from "react";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaTwitter,
+  FaWhatsapp,
+  FaTiktok,
+} from "react-icons/fa";
+import { FiPhoneCall } from "react-icons/fi";
+import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
-import { Link } from "react-scroll";
-const Intro = () => {
-  // Transition
-  const transition = { duration: 2, type: "spring" };
+import "./Intro.css";
 
-  // context
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
-
+const Main = () => {
   return (
-    <div className="Intro" id="Intro">
-      {/* left name side */}
-      <div className="i-left">
-        <div className="i-name">
-          {/* yahan change hy darkmode ka */}
-          <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
-          <span>Andrew Thomas</span>
-          <span>
-            Frontend Developer with high level of experience in web designing
-            and development, producting the Quality work
-          </span>
-        </div>
-        <Link to="contact" smooth={true} spy={true}>
-          <button className="button i-button">Hire me</button>
-        </Link>
-        {/* social icons */}
-        <div className="i-icons">
-          <img src={Github} alt="" />
-          <img src={LinkedIn} alt="" />
-          <img src={Instagram} alt="" />
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 30 }}
+      transition={{ duration: 2 }}
+    >
+      <div id="home" className="main-container">
+        <div className="content-wrapper">
+          <div>
+            <p className="intro-text">LET'S BUILD SOMETHING BEAUTIFUL</p>
+            <h1 className="greeting">
+              Hi, I am <span className="highlight">Michael Munavu</span>
+            </h1>
+            <h2 className="role">I am a</h2>
+            <h1 className="dynamic-role">
+              <Typewriter
+                options={{
+                  strings: [
+                    "Full Stack Developer",
+                    "React Js Developer",
+                    "Phoenix Developer",
+                    "Elixir Developer",
+                    "Technical Writer",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                  cursor: "",
+                }}
+              />
+            </h1>
+            <p className="description">
+              I am a full-stack developer with 4 years of experience, trained at
+              Microverse and Moringa. I specialize in building scalable web
+              applications using Elixir, Phoenix, and React JS. From startups to
+              enterprise solutions, I’ve delivered projects that prioritize user
+              experience and performance. I also create content around tech to
+              help developers grow. Let’s create something impactful together.
+            </p>
+            <div className="social-icons">
+              <div className="icon-wrapper">
+                <a
+                  href="https://www.linkedin.com/in/michael-munavu/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaLinkedin className="icon" />
+                </a>
+              </div>
+              <div className="icon-wrapper">
+                <a
+                  href="https://github.com/MICHAELMUNAVU83"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaGithub className="icon" />
+                </a>
+              </div>
+              <div className="icon-wrapper">
+                <a
+                  href="https://twitter.com/MichaelTrance1"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaTwitter className="icon" />
+                </a>
+              </div>
+              <div className="icon-wrapper">
+                <a href="tel:0740769596" rel="noopener noreferrer">
+                  <FiPhoneCall className="icon" />
+                </a>
+              </div>
+              <div className="icon-wrapper">
+                <a
+                  href="https://wa.me/254740769596"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaWhatsapp className="icon" />
+                </a>
+              </div>
+              <div className="icon-wrapper">
+                <a
+                  href="https://www.tiktok.com/@michaelmunavu"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaTiktok className="icon" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      {/* right image side */}
-      <div className="i-right">
-        <img src={Vector1} alt="" />
-        <img src={Vector2} alt="" />
-        <img src={boy} alt="" />
-        {/* animation */}
-        <motion.img
-          initial={{ left: "-36%" }}
-          whileInView={{ left: "-24%" }}
-          transition={transition}
-          src={glassesimoji}
-          alt=""
-        />
-
-        <motion.div
-          initial={{ top: "-4%", left: "74%" }}
-          whileInView={{ left: "68%" }}
-          transition={transition}
-          className="floating-div"
-        >
-          <FloatinDiv img={crown} text1="Web" text2="Developer" />
-        </motion.div>
-
-        {/* animation */}
-        <motion.div
-          initial={{ left: "9rem", top: "18rem" }}
-          whileInView={{ left: "0rem" }}
-          transition={transition}
-          className="floating-div"
-        >
-          {/* floatinDiv mein change hy dark mode ka */}
-          <FloatinDiv img={thumbup} text1="Best Design" text2="Award" />
-        </motion.div>
-
-        <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>
-        <div
-          className="blur"
-          style={{
-            background: "#C1F5FF",
-            top: "17rem",
-            width: "21rem",
-            height: "11rem",
-            left: "-9rem",
-          }}
-        ></div>
-      </div>
-    </div>
+    </motion.div>
   );
 };
 
-export default Intro;
+export default Main;
